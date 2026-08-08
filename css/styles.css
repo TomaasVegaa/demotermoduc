@@ -91,11 +91,11 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-glass);
-  padding: 14px 0;
+  padding: 12px 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
@@ -103,27 +103,29 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--text-dark);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .brand-logo i {
   color: var(--cyan-primary);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 22px;
   list-style: none;
 }
 
@@ -145,14 +147,15 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 11px 20px;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
   border: none;
   cursor: pointer;
   text-decoration: none;
+  white-space: nowrap;
   transition: var(--transition);
 }
 
@@ -205,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Visual Banner */
 .hero-visual {
-  padding: 150px 0 80px;
+  padding: 140px 0 70px;
   background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
 }
 
@@ -220,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 6px 14px;
   background: #E0F2FE;
   border: 1px solid #BAE6FD;
   border-radius: var(--radius-pill);
@@ -255,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Clients Logo Slider */
 .clients-slider-section {
-  padding: 45px 0;
+  padding: 40px 0;
   background: #FFFFFF;
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
@@ -264,12 +267,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider-title {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--text-muted);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .slider-container {
@@ -284,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   top: 0;
-  width: 120px;
+  width: 100px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
@@ -303,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
 .slider-track {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
   width: max-content;
   animation: scroll 35s linear infinite;
 }
@@ -318,21 +321,21 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 50px;
-  padding: 10px 24px;
+  height: 46px;
+  padding: 8px 20px;
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #475569;
   white-space: nowrap;
   transition: var(--transition);
 }
 
 .logo-item i {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--cyan-primary);
 }
 
@@ -345,7 +348,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Photo Gallery Showcase */
 .section-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .section-subtitle {
@@ -430,13 +433,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Service Cards */
 .services-section {
-  padding: 80px 0;
+  padding: 70px 0;
   background: #FFFFFF;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
 }
 
@@ -444,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #FFFFFF;
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
-  padding: 28px;
+  padding: 26px;
   box-shadow: var(--shadow-card);
   transition: var(--transition);
 }
@@ -459,19 +462,19 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .service-icon {
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
   border-radius: var(--radius-sm);
   background: #E0F2FE;
   border: 1px solid #BAE6FD;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--cyan-primary);
 }
 
@@ -496,22 +499,28 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 8px;
 }
 
-/* Presupuesto Form Section */
+/* Presupuesto Form Section (Mobile First Responsive Form Layout) */
 .cotizador-section {
-  padding: 80px 0;
+  padding: 70px 0;
   background: #F8FAFC;
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
 }
 
 .whatsapp-form-card {
-  max-width: 760px;
+  max-width: 680px;
   margin: 0 auto;
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 36px 32px;
   box-shadow: var(--shadow-card);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
 .form-group {
@@ -520,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-group label {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -530,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-control {
   width: 100%;
-  padding: 13px 16px;
+  padding: 12px 15px;
   background: #F8FAFC;
   border: 1px solid #CBD5E1;
   border-radius: var(--radius-sm);
@@ -547,138 +556,96 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--cyan-glow);
 }
 
-/* Instagram Feed Real Post Cards */
+/* Instagram Embed Container */
 .insta-section {
-  padding: 80px 0;
+  padding: 70px 0;
   background: #FFFFFF;
-}
-
-.insta-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.insta-card-post {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-
-.insta-card-post:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.insta-post-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  border-bottom: 1px solid #F1F5F9;
-}
-
-.insta-avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F56040);
-  padding: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.insta-avatar-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #0F172A;
-  color: #FFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-}
-
-.insta-user-info h4 {
-  font-size: 0.9rem;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.insta-user-info span {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-.insta-post-img {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-}
-
-.insta-post-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.insta-post-body {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex: 1;
-}
-
-.insta-actions {
-  display: flex;
-  gap: 14px;
-  font-size: 1.1rem;
-  color: #0F172A;
-}
-
-.insta-caption {
-  font-size: 0.88rem;
-  color: var(--text-main);
-  line-height: 1.4;
-}
-
-.insta-caption strong {
-  color: #0F172A;
-}
-
-.insta-hashtags {
-  font-size: 0.8rem;
-  color: var(--cyan-primary);
-  font-weight: 500;
 }
 
 footer {
   background: #0F172A;
-  padding: 50px 0 30px;
+  padding: 45px 0 25px;
   border-top: 1px solid #1E293B;
   color: #94A3B8;
 }
 
-@media (max-width: 992px) {
+.deploy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #1E293B;
+  border: 1px solid #334155;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  color: #94A3B8;
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE FIXES
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Navbar Button Fix */
+  .nav-btn-cta {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+  
+  .brand-logo {
+    font-size: 1.15rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-visual {
+    padding: 110px 0 50px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
-  .hero-title {
-    font-size: 2.5rem;
+
+  /* Form Row Single Column Fix on Mobile */
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
   }
-  .insta-cards-grid {
-    grid-template-columns: 1fr;
+
+  .whatsapp-form-card {
+    padding: 24px 18px;
   }
-  .nav-links {
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 11px 13px;
+  }
+}
+
+@media (max-width: 440px) {
+  .nav-btn-text-full {
+    display: none;
+  }
+  .nav-btn-text-short {
+    display: inline;
+  }
+  .nav-btn-cta {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+}
+@media (min-width: 441px) {
+  .nav-btn-text-short {
     display: none;
   }
 }
