@@ -192,6 +192,17 @@ h1, h2, h3, h4, h5, h6 {
   background: #F8FAFC;
 }
 
+.btn-insta {
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F56040);
+  color: #FFF;
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+}
+
+.btn-insta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(225, 48, 108, 0.45);
+}
+
 /* Hero Visual Banner */
 .hero-visual {
   padding: 150px 0 80px;
@@ -242,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* Clients Logo Slider (Infinite Automatic Smooth Carousel) */
+/* Clients Logo Slider */
 .clients-slider-section {
   padding: 45px 0;
   background: #FFFFFF;
@@ -298,12 +309,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .logo-item {
@@ -489,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 8px;
 }
 
-/* Presupuesto / WhatsApp Consultation Section (Centered & High Converting) */
+/* Presupuesto Form Section */
 .cotizador-section {
   padding: 80px 0;
   background: #F8FAFC;
@@ -540,63 +547,118 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--cyan-glow);
 }
 
-/* Instagram Grid */
+/* Instagram Feed Real Post Cards */
 .insta-section {
   padding: 80px 0;
   background: #FFFFFF;
 }
 
-.insta-feed-grid {
+.insta-cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-top: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
 
-.insta-post {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: var(--radius-sm);
+.insta-card-post {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--border-glass);
-  background: #F1F5F9;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
 }
 
-.insta-post img {
+.insta-card-post:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.insta-post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.insta-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F56040);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insta-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #0F172A;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.insta-user-info h4 {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.insta-user-info span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.insta-post-img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.insta-post-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.insta-post-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.75);
+.insta-post-body {
+  padding: 16px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  opacity: 0;
-  transition: var(--transition);
-  color: #FFF;
-  font-weight: bold;
-}
-
-.insta-post:hover .insta-post-overlay {
-  opacity: 1;
-}
-
-/* Vercel Deploy Badge Footer */
-.deploy-badge {
-  display: inline-flex;
-  align-items: center;
+  flex-direction: column;
   gap: 8px;
-  padding: 6px 14px;
-  background: #F1F5F9;
-  border: 1px solid #E2E8F0;
-  border-radius: var(--radius-pill);
+  flex: 1;
+}
+
+.insta-actions {
+  display: flex;
+  gap: 14px;
+  font-size: 1.1rem;
+  color: #0F172A;
+}
+
+.insta-caption {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.insta-caption strong {
+  color: #0F172A;
+}
+
+.insta-hashtags {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--cyan-primary);
+  font-weight: 500;
 }
 
 footer {
@@ -613,8 +675,8 @@ footer {
   .hero-title {
     font-size: 2.5rem;
   }
-  .insta-feed-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .insta-cards-grid {
+    grid-template-columns: 1fr;
   }
   .nav-links {
     display: none;
