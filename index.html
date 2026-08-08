@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termoduc | Climatización Central, Conductos & Electricidad</title>
-  <meta name="description" content="Termoduc - Fabricación de conductos a medida, instalación de aire acondicionado central/splits y mantenimiento de tableros eléctricos.">
+  <title>Termoduc Climatización | Mantenimiento, Ductos & Servicios Eléctricos</title>
+  <meta name="description" content="Termoduc Climatización - Mantenimiento preventivo y correctivo de equipos de aire acondicionado, fabricación de ductos y servicios eléctricos.">
   
   <!-- Google Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
@@ -25,15 +24,16 @@
       </a>
 
       <ul class="nav-links">
+        <li><a href="#clientes">Clientes</a></li>
         <li><a href="#galeria">Galería de Obras</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#cotizador">Presupuestos</a></li>
+        <li><a href="#presupuesto">Solicitar Presupuesto</a></li>
         <li><a href="#instagram">Instagram @termoduc</a></li>
       </ul>
 
       <div>
-        <a href="#cotizador" class="btn btn-cyan">
-          <i class="fas fa-calculator"></i> Cotizar
+        <a href="#presupuesto" class="btn btn-cyan">
+          <i class="fab fa-whatsapp text-green"></i> Solicitar Presupuesto
         </a>
       </div>
     </div>
@@ -44,20 +44,20 @@
     <div class="container hero-grid">
       <div>
         <div class="hero-badge">
-          <i class="fas fa-bolt"></i> Climatización & Electricidad Industrial
+          <i class="fas fa-shield-alt"></i> Garantía & Servicio Técnico Certificado
         </div>
         <h1 class="hero-title">
-          Fabricación de <span class="gradient-cyan">Conductos</span> & Tableros <span class="gradient-orange">Eléctricos</span>
+          Termoduc <span class="gradient-cyan">Climatización</span>
         </h1>
         <p class="hero-subtitle">
-          Soluciones de ingeniería térmica y eléctrica para empresas, industrias y residencias.
+          Mantenimiento preventivo y correctivo de equipos de aire acondicionado &nbsp;|&nbsp; Fabricación de ductos
         </p>
         <div class="hero-actions">
-          <a href="#cotizador" class="btn btn-orange">
-            <i class="fas fa-file-invoice-dollar"></i> Presupuesto Express
+          <a href="#presupuesto" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Solicitar Presupuesto por WhatsApp
           </a>
-          <a href="https://api.whatsapp.com/send?phone=5491100000000&text=Hola%20Termoduc,%20quisiera%20consultar%20por%20un%20servicio" target="_blank" class="btn btn-outline">
-            <i class="fab fa-whatsapp text-cyan"></i> Consultar WhatsApp
+          <a href="#galeria" class="btn btn-outline">
+            <i class="fas fa-images"></i> Ver Proyectos Realizados
           </a>
         </div>
       </div>
@@ -67,14 +67,45 @@
         <img src="assets/ductos.jpg" alt="Fabricación de conductos a medida Termoduc">
         <div class="photo-overlay">
           <span class="photo-tag"><i class="fas fa-star"></i> Taller Propio</span>
-          <h3 class="photo-title">Fabricación e Instalación de Conductos</h3>
+          <h3 class="photo-title">Fabricación e Instalación de Ductos Aislados</h3>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Photo Gallery Showcase Section (Visual First) -->
-  <section id="galeria" style="padding: 60px 0;">
+  <!-- Infinite Clients Logo Slider Section -->
+  <section id="clientes" class="clients-slider-section">
+    <div class="container">
+      <div class="slider-title">
+        <i class="fas fa-building text-cyan"></i> Empresas e Instituciones que Confían en Nosotros
+      </div>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider-track">
+        <!-- Set 1 -->
+        <div class="logo-item"><i class="fas fa-snowflake"></i> CARRIER HVAC</div>
+        <div class="logo-item"><i class="fas fa-building"></i> SANATORIO CENTRAL</div>
+        <div class="logo-item"><i class="fas fa-wind"></i> BGH CLIMATIZACIÓN</div>
+        <div class="logo-item"><i class="fas fa-industry"></i> SURAZO INDUSTRIAL</div>
+        <div class="logo-item"><i class="fas fa-store"></i> SHOPPING MALL CENTER</div>
+        <div class="logo-item"><i class="fas fa-bolt"></i> YORK CENTRAL SYSTEMS</div>
+        <div class="logo-item"><i class="fas fa-hard-hat"></i> CONSTRUCTORA & OBRAS</div>
+        
+        <!-- Set 2 (Duplicated for Seamless Loop) -->
+        <div class="logo-item"><i class="fas fa-snowflake"></i> CARRIER HVAC</div>
+        <div class="logo-item"><i class="fas fa-building"></i> SANATORIO CENTRAL</div>
+        <div class="logo-item"><i class="fas fa-wind"></i> BGH CLIMATIZACIÓN</div>
+        <div class="logo-item"><i class="fas fa-industry"></i> SURAZO INDUSTRIAL</div>
+        <div class="logo-item"><i class="fas fa-store"></i> SHOPPING MALL CENTER</div>
+        <div class="logo-item"><i class="fas fa-bolt"></i> YORK CENTRAL SYSTEMS</div>
+        <div class="logo-item"><i class="fas fa-hard-hat"></i> CONSTRUCTORA & OBRAS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Showcase Section -->
+  <section id="galeria" style="padding: 70px 0;">
     <div class="container">
       <div class="section-header">
         <span class="section-subtitle">Portfolio de Trabajos</span>
@@ -125,8 +156,8 @@
   <section id="servicios" class="services-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Servicios</span>
-        <h2 class="section-title">¿Qué Hacemos en Termoduc?</h2>
+        <span class="section-subtitle">Nuestros Servicios</span>
+        <h2 class="section-title">Especialistas en Climatización</h2>
       </div>
 
       <div class="services-grid">
@@ -135,24 +166,24 @@
             <div class="service-icon"><i class="fas fa-wind"></i></div>
             <span style="font-weight: 700; font-size: 0.8rem; color: var(--cyan-primary);">CONDUCTOS</span>
           </div>
-          <h3>Fabricación de Conductos</h3>
+          <h3>Fabricación de Ductos</h3>
           <ul class="service-bullets">
-            <li><i class="fas fa-check-circle"></i> Conductos en chapa galvanizada y fibra aislada</li>
-            <li><i class="fas fa-check-circle"></i> Redes de difusión, rejas y difusores a medida</li>
-            <li><i class="fas fa-check-circle"></i> Montaje en falso techo e industrial</li>
+            <li><i class="fas fa-check-circle"></i> Fabricación propia de ductos aislados</li>
+            <li><i class="fas fa-check-circle"></i> Inyección, retorno y difusión de aire a medida</li>
+            <li><i class="fas fa-check-circle"></i> Montajes en altura e instalaciones industriales</li>
           </ul>
         </div>
 
         <div class="service-box">
           <div class="service-icon-header">
-            <div class="service-icon"><i class="fas fa-snowflake"></i></div>
-            <span style="font-weight: 700; font-size: 0.8rem; color: var(--cyan-primary);">CLIMATIZACIÓN</span>
+            <div class="service-icon"><i class="fas fa-tools"></i></div>
+            <span style="font-weight: 700; font-size: 0.8rem; color: var(--cyan-primary);">MANTENIMIENTO</span>
           </div>
-          <h3>Aire Acondicionado</h3>
+          <h3>Mantenimiento Preventivo & Correctivo</h3>
           <ul class="service-bullets">
-            <li><i class="fas fa-check-circle"></i> Instalación de Splits, Multi-Splits y Centrales</li>
-            <li><i class="fas fa-check-circle"></i> Service preventivo, recarga de gas R410a/R22</li>
-            <li><i class="fas fa-check-circle"></i> Diagnóstico de compresores y fugas</li>
+            <li><i class="fas fa-check-circle"></i> Service y reparación de equipos de aire acondicionado</li>
+            <li><i class="fas fa-check-circle"></i> Limpieza de serpentinas y recarga de refrigerante</li>
+            <li><i class="fas fa-check-circle"></i> Diagnóstico técnico y cambio de compresores</li>
           </ul>
         </div>
 
@@ -164,111 +195,62 @@
           <h3>Tableros & Electricidad</h3>
           <ul class="service-bullets">
             <li><i class="fas fa-check-circle"></i> Armado y mantenimiento de tableros trifásicos</li>
-            <li><i class="fas fa-check-circle"></i> Térmicas, disyuntores y protecciones de línea</li>
-            <li><i class="fas fa-check-circle"></i> Balanceo de cargas e instalaciones eléctricas</li>
+            <li><i class="fas fa-check-circle"></i> Térmicas, disyuntores y protecciones eléctricas</li>
+            <li><i class="fas fa-check-circle"></i> Balanceo de cargas e instalaciones comerciales</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Budget Section -->
-  <section id="cotizador" class="cotizador-section">
+  <!-- Consultation / Direct WhatsApp Budget Form Section -->
+  <section id="presupuesto" class="cotizador-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">Cotizaciones Rápidas</span>
-        <h2 class="section-title">Generador de Presupuestos Oficiales</h2>
+        <span class="section-subtitle">Presupuesto Inmediato</span>
+        <h2 class="section-title">Solicitar Cotización por WhatsApp</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 10px auto 0;">Completá los datos de tu consulta u obra y recibí una respuesta rápida directamente en tu WhatsApp.</p>
       </div>
 
-      <div class="cotizador-grid">
-        <!-- Form Left -->
-        <div class="service-box">
-          <div class="form-group" style="margin-bottom: 14px;">
-            <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">CLIENTE / EMPRESA</label>
-            <input type="text" id="client-name" class="form-control" placeholder="Ej: Arq. Juan Pérez / Empresa">
+      <div class="whatsapp-form-card">
+        <form id="whatsapp-budget-form">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> Nombre / Empresa</label>
+              <input type="text" id="req-name" class="form-control" placeholder="Ej: Juan Pérez / Empresa SRL" required>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-phone"></i> Teléfono / WhatsApp</label>
+              <input type="text" id="req-phone" class="form-control" placeholder="Ej: 1123456789">
+            </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;">
-            <div>
-              <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">TELÉFONO</label>
-              <input type="text" id="client-phone" class="form-control" placeholder="1123456789">
-            </div>
-            <div>
-              <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">IMPUESTO</label>
-              <select id="tax-select" class="form-control">
-                <option value="0">Sin IVA</option>
-                <option value="0.21">IVA 21%</option>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div class="form-group">
+              <label><i class="fas fa-cog"></i> Servicio Requerido</label>
+              <select id="req-service" class="form-control">
+                <option value="Fabricación e Instalación de Ductos">Fabricación e Instalación de Ductos</option>
+                <option value="Mantenimiento / Service de Aire Acondicionado">Mantenimiento / Service de Aire Acondicionado</option>
+                <option value="Reparación de Equipo Central / Split">Reparación de Equipo Central / Split</option>
+                <option value="Armado / Service de Tablero Eléctrico">Armado / Service de Tablero Eléctrico</option>
+                <option value="Otro / Consulta General">Otro / Consulta General</option>
               </select>
             </div>
-          </div>
-
-          <div class="form-group" style="margin-bottom: 14px;">
-            <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">ÍTEMS A COTIZAR</label>
-            <div id="budget-items-container">
-              <!-- JS Populated Rows -->
+            <div class="form-group">
+              <label><i class="fas fa-map-marker-alt"></i> Ubicación / Zona de la Obra</label>
+              <input type="text" id="req-location" class="form-control" placeholder="Ej: CABA / Zona Norte">
             </div>
-            <button type="button" id="btn-add-item" class="btn btn-outline" style="width: 100%; margin-top: 10px;">
-              <i class="fas fa-plus"></i> Agregar Ítem
-            </button>
           </div>
 
           <div class="form-group">
-            <label style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">OBSERVACIONES</label>
-            <textarea id="budget-notes" class="form-control" rows="2" placeholder="Garantía escrita 6 meses. Validez 15 días."></textarea>
-          </div>
-        </div>
-
-        <!-- Live PDF Canvas Preview Right -->
-        <div>
-          <div id="budget-pdf-content" class="pdf-preview">
-            <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #0A1128; padding-bottom: 12px; margin-bottom: 14px;">
-              <div>
-                <h3 style="color: #0A1128; font-weight: 800;">TERMODUC</h3>
-                <div style="color: #00B4D8; font-size: 0.8rem; font-weight: 700;">Climatización & Electricidad</div>
-                <div style="font-size: 0.75rem; color: #64748B;">enzo49098@gmail.com | @termoduc</div>
-              </div>
-              <div style="text-align: right;">
-                <div style="font-weight: 700;">PRESUPUESTO</div>
-                <div id="preview-number" style="color: #F77F00; font-weight: 800;">PRE-9482</div>
-                <div id="preview-date" style="font-size: 0.8rem; color: #64748B;">06/08/2026</div>
-              </div>
-            </div>
-
-            <div style="background: #F1F5F9; padding: 10px; border-radius: 6px; margin-bottom: 14px; font-size: 0.85rem;">
-              <div><strong>Cliente:</strong> <span id="preview-client-name">Cliente Particular / Empresa</span></div>
-              <div id="preview-client-phone" style="color: #475569;"></div>
-            </div>
-
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 14px;">
-              <thead>
-                <tr style="background: #0A1128; color: #FFF; font-size: 0.8rem;">
-                  <th style="padding: 8px; text-align: left;">Descripción</th>
-                  <th style="padding: 8px; text-align: center;">Cant.</th>
-                  <th style="padding: 8px; text-align: right;">Precio U.</th>
-                  <th style="padding: 8px; text-align: right;">Total</th>
-                </tr>
-              </thead>
-              <tbody id="preview-table-body">
-                <!-- JS populated -->
-              </tbody>
-            </table>
-
-            <div style="text-align: right; border-top: 2px solid #0A1128; padding-top: 10px;">
-              <div style="font-size: 0.85rem; color: #64748B;">Subtotal: <span id="preview-subtotal">$ 0</span></div>
-              <div style="font-size: 0.85rem; color: #64748B;">Impuestos: <span id="preview-tax">$ 0</span></div>
-              <h3 style="color: #0A1128; margin-top: 4px;">Total: <span id="preview-total" style="color: #00B4D8;">$ 0</span></h3>
-            </div>
+            <label><i class="fas fa-comment-alt"></i> Detalle del Trabajo o Consulta</label>
+            <textarea id="req-message" class="form-control" rows="3" placeholder="Ingresá los detalles del equipo, metros aproximados de ductos o tipo de trabajo..."></textarea>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px;">
-            <button id="btn-export-pdf" class="btn btn-cyan">
-              <i class="fas fa-file-pdf"></i> Descargar PDF
-            </button>
-            <button id="btn-send-whatsapp" class="btn btn-orange">
-              <i class="fab fa-whatsapp"></i> WhatsApp Directo
-            </button>
-          </div>
-        </div>
+          <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding: 15px; font-size: 1.05rem;">
+            <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> Enviar Solicitud a WhatsApp
+          </button>
+        </form>
       </div>
     </div>
   </section>
@@ -332,7 +314,7 @@
       </div>
 
       <div class="deploy-badge">
-        <i class="fab fa-triangle text-cyan"></i> <strong>Vercel Ready</strong> (Deploy en 1 clic)
+        <i class="fab fa-triangle text-cyan"></i> <strong>Vercel Ready</strong>
       </div>
     </div>
   </footer>
