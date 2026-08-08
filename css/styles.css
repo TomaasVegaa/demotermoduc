@@ -1,7 +1,7 @@
 /* ==========================================================================
    TERMODUC - Climatización Central, Conductos & Servicios Eléctricos
    Modern Light Industrial UI/UX Design System (Vercel Ready)
-   Refactored for CRO, Visual Hierarchy & Mobile UX
+   Refactored for CRO, Visual Hierarchy & Mobile UX (Mobile Responsive Fixes)
    ========================================================================== */
 
 :root {
@@ -52,6 +52,11 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -61,7 +66,6 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* ==========================================================================
@@ -150,6 +154,7 @@ p {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
@@ -206,8 +211,8 @@ p {
   border: none;
   cursor: pointer;
   text-decoration: none;
-  white-space: nowrap;
   transition: var(--transition);
+  max-width: 100%;
 }
 
 /* High Contrast Primary Hero CTA */
@@ -219,6 +224,7 @@ p {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-cta);
   letter-spacing: 0.2px;
+  text-align: center;
 }
 
 .btn-whatsapp-hero:hover {
@@ -257,6 +263,7 @@ p {
   border: 1px solid #CBD5E1;
   color: var(--text-main);
   box-shadow: none;
+  text-align: center;
 }
 
 .btn-outline:hover {
@@ -280,8 +287,8 @@ p {
 /* Robust Form Submit Button */
 .btn-form-submit {
   width: 100%;
-  padding: 16px 28px;
-  font-size: 1.1rem;
+  padding: 16px 24px;
+  font-size: 1.05rem;
   font-weight: 800;
   border-radius: var(--radius-md);
   background: linear-gradient(135deg, #25D366, #16A34A);
@@ -289,6 +296,8 @@ p {
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
   letter-spacing: 0.3px;
   margin-top: 10px;
+  white-space: normal;
+  text-align: center;
 }
 
 .btn-form-submit:hover {
@@ -303,6 +312,7 @@ p {
 .hero-visual {
   padding: 160px 0 90px;
   background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  overflow: hidden;
 }
 
 .hero-grid {
@@ -324,10 +334,12 @@ p {
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 22px;
+  max-width: 100%;
 }
 
 .hero-title {
   margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
 .hero-subtitle {
@@ -339,6 +351,7 @@ p {
   gap: 16px;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -443,7 +456,7 @@ p {
 }
 
 /* ==========================================================================
-   SECTION HEADERS & SPACING RHYTHM (90px Vertical Respiro)
+   SECTION HEADERS & SPACING RHYTHM
    ========================================================================== */
 .section-header {
   text-align: center;
@@ -799,7 +812,7 @@ footer {
 }
 
 /* ==========================================================================
-   MOBILE & RESPONSIVE FIXES
+   MOBILE & RESPONSIVE FIXES (Fluid Layout for Small Screens)
    ========================================================================== */
 @media (max-width: 992px) {
   .about-card {
@@ -810,16 +823,17 @@ footer {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    line-height: 1.15;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   .nav-btn-cta {
-    padding: 8px 14px;
-    font-size: 0.82rem;
+    padding: 7px 12px;
+    font-size: 0.8rem;
   }
   
   .brand-logo-img {
@@ -835,16 +849,41 @@ footer {
   }
 
   .hero-visual {
-    padding: 120px 0 60px;
+    padding: 115px 0 50px;
   }
 
   .hero-subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
+  }
+
+  /* Fix Mobile Buttons Stacking & Full Width */
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    white-space: normal;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+
+  .btn-whatsapp-hero {
+    font-size: 0.95rem;
+    padding: 14px 18px;
   }
 
   .services-section,
@@ -852,7 +891,7 @@ footer {
   .about-section,
   .cotizador-section,
   .insta-section {
-    padding: 65px 0;
+    padding: 60px 0;
   }
 
   .form-row {
@@ -861,7 +900,7 @@ footer {
   }
 
   .whatsapp-form-card {
-    padding: 26px 20px;
+    padding: 24px 18px;
   }
 
   .form-control {
@@ -882,8 +921,13 @@ footer {
     display: inline;
   }
   .nav-btn-cta {
-    padding: 7px 10px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  
+  .hero-badge {
     font-size: 0.78rem;
+    padding: 5px 12px;
   }
 }
 
