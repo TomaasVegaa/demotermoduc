@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Clients Logo Slider */
 .clients-slider-section {
-  padding: 40px 0;
+  padding: 45px 0;
   background: #FFFFFF;
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
@@ -277,12 +277,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider-title {
   text-align: center;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .slider-container {
@@ -297,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   top: 0;
-  width: 100px;
+  width: 120px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
@@ -316,9 +316,9 @@ h1, h2, h3, h4, h5, h6 {
 .slider-track {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
   width: max-content;
-  animation: scroll 35s linear infinite;
+  animation: scroll 45s linear infinite;
 }
 
 @keyframes scroll {
@@ -331,16 +331,24 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 46px;
-  padding: 8px 20px;
+  height: 54px;
+  padding: 8px 22px;
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #475569;
   white-space: nowrap;
+  transition: var(--transition);
+}
+
+.logo-item-img {
+  height: 38px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
   transition: var(--transition);
 }
 
@@ -352,6 +360,8 @@ h1, h2, h3, h4, h5, h6 {
 .logo-item:hover {
   border-color: var(--cyan-primary);
   color: var(--text-dark);
+  background: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   transform: translateY(-2px);
 }
 
