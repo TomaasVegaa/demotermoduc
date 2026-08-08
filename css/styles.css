@@ -1,7 +1,7 @@
 /* ==========================================================================
    TERMODUC - Climatización Central, Conductos & Servicios Eléctricos
    Modern Light Industrial UI/UX Design System (Vercel Ready)
-   Refactored for CRO, Visual Hierarchy & Mobile UX (Mobile Responsive Fixes)
+   Refactored for CRO, Visual Hierarchy & Mobile UX (Clean Centered Hero)
    ========================================================================== */
 
 :root {
@@ -73,7 +73,7 @@ body {
    ========================================================================== */
 h1 {
   font-family: var(--font-heading);
-  font-size: 3.4rem;
+  font-size: 3.6rem;
   font-weight: 800;
   line-height: 1.12;
   color: var(--text-dark);
@@ -105,7 +105,7 @@ h4 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   line-height: 1.6;
 }
@@ -220,7 +220,7 @@ p {
   background: linear-gradient(135deg, #25D366, #1EBE57);
   color: #FFFFFF !important;
   font-size: 1.05rem;
-  padding: 14px 28px;
+  padding: 15px 32px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-cta);
   letter-spacing: 0.2px;
@@ -257,13 +257,15 @@ p {
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
-/* Secondary Button (Neutral & Subdued so Primary CTA Dominates) */
+/* Secondary Button (Neutral & Subdued) */
 .btn-outline {
   background: #FFFFFF;
   border: 1px solid #CBD5E1;
   color: var(--text-main);
   box-shadow: none;
   text-align: center;
+  padding: 15px 28px;
+  border-radius: var(--radius-md);
 }
 
 .btn-outline:hover {
@@ -307,18 +309,20 @@ p {
 }
 
 /* ==========================================================================
-   1. HERO SECTION
+   1. HERO SECTION (Clean Centered Layout)
    ========================================================================== */
 .hero-visual {
-  padding: 160px 0 90px;
+  padding: 170px 0 95px;
   background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  text-align: center;
   overflow: hidden;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 45px;
+.hero-content-centered {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -326,30 +330,35 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 6px 18px;
   background: #E0F2FE;
   border: 1px solid #BAE6FD;
   border-radius: var(--radius-pill);
   color: var(--cyan-primary);
   font-size: 0.85rem;
   font-weight: 700;
-  margin-bottom: 22px;
-  max-width: 100%;
+  margin-bottom: 24px;
 }
 
 .hero-title {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   word-wrap: break-word;
 }
 
 .hero-subtitle {
-  margin-bottom: 34px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 760px;
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -812,7 +821,7 @@ footer {
 }
 
 /* ==========================================================================
-   MOBILE & RESPONSIVE FIXES (Fluid Layout for Small Screens)
+   MOBILE & RESPONSIVE FIXES
    ========================================================================== */
 @media (max-width: 992px) {
   .about-card {
@@ -823,7 +832,7 @@ footer {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     line-height: 1.15;
   }
 
@@ -855,15 +864,9 @@ footer {
   .hero-subtitle {
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  /* Fix Mobile Buttons Stacking & Full Width */
   .hero-actions {
     flex-direction: column;
     gap: 12px;
