@@ -1,6 +1,7 @@
 /* ==========================================================================
    TERMODUC - Climatización Central, Conductos & Servicios Eléctricos
-   Modern Light & Clean Industrial Design System (Vercel Ready)
+   Modern Light Industrial UI/UX Design System (Vercel Ready)
+   Refactored for CRO, Visual Hierarchy & Mobile UX
    ========================================================================== */
 
 :root {
@@ -22,6 +23,7 @@
   --orange-glow: rgba(234, 88, 12, 0.18);
   --whatsapp-green: #25D366;
   --whatsapp-hover: #1EBE57;
+  --whatsapp-glow: rgba(37, 211, 102, 0.35);
   
   /* Neutral Text - High Contrast Slate */
   --text-main: #0F172A;
@@ -40,6 +42,7 @@
   
   --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.06);
   --shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --shadow-cta: 0 8px 25px rgba(37, 211, 102, 0.4);
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -57,14 +60,50 @@ body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-main);
-  line-height: 1.5;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* ==========================================================================
+   TYPOGRAPHY SCALE (H1 > H2 > H3 > Body)
+   ========================================================================== */
+h1 {
   font-family: var(--font-heading);
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--text-dark);
+  letter-spacing: -0.8px;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-dark);
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-dark);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 .container {
@@ -95,8 +134,8 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-glass);
-  padding: 10px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  padding: 12px 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.03);
 }
 
 .nav-container {
@@ -151,22 +190,41 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--cyan-primary);
 }
 
-/* Buttons */
+/* ==========================================================================
+   BUTTON SYSTEM & CTAs (CRO Optimized)
+   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 11px 20px;
+  gap: 10px;
+  padding: 12px 22px;
   font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
   border-radius: var(--radius-sm);
   border: none;
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
   transition: var(--transition);
+}
+
+/* High Contrast Primary Hero CTA */
+.btn-whatsapp-hero {
+  background: linear-gradient(135deg, #25D366, #1EBE57);
+  color: #FFFFFF !important;
+  font-size: 1.05rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-cta);
+  letter-spacing: 0.2px;
+}
+
+.btn-whatsapp-hero:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #22C55E, #16A34A);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
 }
 
 .btn-cyan {
@@ -193,16 +251,19 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
+/* Secondary Button (Neutral & Subdued so Primary CTA Dominates) */
 .btn-outline {
-  background: #FFF;
+  background: #FFFFFF;
   border: 1px solid #CBD5E1;
   color: var(--text-main);
+  box-shadow: none;
 }
 
 .btn-outline:hover {
   border-color: var(--cyan-primary);
   color: var(--cyan-primary);
   background: #F8FAFC;
+  transform: translateY(-1px);
 }
 
 .btn-insta {
@@ -216,16 +277,38 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 25px rgba(225, 48, 108, 0.45);
 }
 
-/* Hero Visual Banner */
+/* Robust Form Submit Button */
+.btn-form-submit {
+  width: 100%;
+  padding: 16px 28px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #25D366, #16A34A);
+  color: #FFFFFF;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+}
+
+.btn-form-submit:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #22C55E, #15803D);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
 .hero-visual {
-  padding: 140px 0 70px;
+  padding: 160px 0 90px;
   background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
+  gap: 45px;
   align-items: center;
 }
 
@@ -233,42 +316,36 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 6px 16px;
   background: #E0F2FE;
   border: 1px solid #BAE6FD;
   border-radius: var(--radius-pill);
   color: var(--cyan-primary);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .hero-title {
-  font-size: 3.2rem;
-  line-height: 1.12;
-  margin-bottom: 18px;
-  color: var(--text-dark);
-  letter-spacing: -0.5px;
+  margin-bottom: 20px;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 32px;
-  max-width: 680px;
+  margin-bottom: 34px;
 }
 
 .hero-actions {
   display: flex;
-  gap: 14px;
+  gap: 16px;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-/* Clients Logo Slider */
+/* ==========================================================================
+   2. CLIENTS SLIDER SECTION (Prueba Social)
+   ========================================================================== */
 .clients-slider-section {
-  padding: 40px 0;
+  padding: 55px 0;
   background: #FFFFFF;
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
@@ -278,11 +355,11 @@ h1, h2, h3, h4, h5, h6 {
 .slider-title {
   text-align: center;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--text-muted);
-  margin-bottom: 24px;
+  letter-spacing: 2.5px;
+  color: var(--cyan-primary);
+  margin-bottom: 30px;
 }
 
 .slider-container {
@@ -297,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
   content: '';
   position: absolute;
   top: 0;
-  width: 120px;
+  width: 140px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
@@ -365,121 +442,132 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
-.logo-item:hover .logo-item-img {
-  transform: scale(1.05);
-}
-
-/* About Us Section ("Sobre Nosotros") */
-.about-section {
-  padding: 80px 0;
-  background: #FFFFFF;
-}
-
-.about-card {
-  background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
-  border: 1px solid #E2E8F0;
-  border-radius: var(--radius-lg);
-  padding: 45px;
-  box-shadow: var(--shadow-card);
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.about-text h2 {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
-  color: var(--text-dark);
-}
-
-.about-text p {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.about-features-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.about-feat-box {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: var(--radius-md);
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  transition: var(--transition);
-}
-
-.about-feat-box:hover {
-  border-color: var(--cyan-primary);
-  transform: translateY(-3px);
-}
-
-.about-feat-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-sm);
-  background: #E0F2FE;
-  color: var(--cyan-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-}
-
-.about-feat-icon.orange {
-  background: #FFEDD5;
-  color: var(--orange-accent);
-}
-
-.about-feat-box h4 {
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-
-.about-feat-box p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Photo Gallery Showcase */
+/* ==========================================================================
+   SECTION HEADERS & SPACING RHYTHM (90px Vertical Respiro)
+   ========================================================================== */
 .section-header {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-subtitle {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: var(--cyan-primary);
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-weight: 800;
+  margin-bottom: 10px;
   display: block;
 }
 
-.section-title {
-  font-size: 2.2rem;
-  color: var(--text-dark);
+.section-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-top: 10px;
+}
+
+/* ==========================================================================
+   3. SERVICIOS ESPECIALIZADOS
+   ========================================================================== */
+.services-section {
+  padding: 95px 0;
+  background: #F8FAFC;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.service-box {
+  background: #FFFFFF;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-box:hover {
+  border-color: var(--border-active);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: #E0F2FE;
+  border: 1px solid #BAE6FD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--cyan-primary);
+}
+
+.service-icon.orange {
+  background: #FFEDD5;
+  border-color: #FED7AA;
+  color: var(--orange-accent);
+}
+
+.service-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.service-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.service-bullets li i {
+  color: var(--cyan-primary);
+  margin-top: 3px;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   4. GALERÍA DE PROYECTOS EN OBRA
+   ========================================================================== */
+.gallery-section {
+  padding: 95px 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-glass);
 }
 
 .gallery-masonry {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 22px;
 }
 
 .photo-card {
   position: relative;
-  height: 300px;
+  height: 310px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border-glass);
@@ -505,8 +593,8 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+  padding: 22px;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.92), transparent);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -515,12 +603,12 @@ h1, h2, h3, h4, h5, h6 {
 .photo-tag {
   align-self: flex-start;
   font-size: 0.75rem;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: var(--radius-pill);
   background: rgba(0, 150, 199, 0.25);
   color: #E0F2FE;
   border: 1px solid rgba(224, 242, 254, 0.4);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
@@ -536,103 +624,112 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFF;
 }
 
-/* Expanded Service Cards Grid */
-.services-section {
-  padding: 80px 0;
+/* ==========================================================================
+   5. SOBRE NOSOTROS
+   ========================================================================== */
+.about-section {
+  padding: 95px 0;
   background: #F8FAFC;
   border-top: 1px solid var(--border-glass);
-  border-bottom: 1px solid var(--border-glass);
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
-}
-
-.service-box {
-  background: #FFFFFF;
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 28px;
+.about-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg);
+  padding: 48px;
   box-shadow: var(--shadow-card);
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.service-box:hover {
-  border-color: var(--border-active);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.service-icon-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 45px;
   align-items: center;
-  justify-content: space-between;
+}
+
+.about-text h2 {
   margin-bottom: 18px;
 }
 
-.service-icon {
-  width: 50px;
-  height: 50px;
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.about-feat-box {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: var(--transition);
+}
+
+.about-feat-box:hover {
+  border-color: var(--cyan-primary);
+  transform: translateY(-3px);
+}
+
+.about-feat-icon {
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-sm);
   background: #E0F2FE;
-  border: 1px solid #BAE6FD;
+  color: var(--cyan-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  color: var(--cyan-primary);
+  font-size: 1.25rem;
+  margin-bottom: 14px;
 }
 
-.service-icon.orange {
+.about-feat-icon.orange {
   background: #FFEDD5;
-  border-color: #FED7AA;
   color: var(--orange-accent);
 }
 
-.service-bullets {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 15px;
-  font-size: 0.9rem;
-  color: var(--text-muted);
+.about-feat-box h4 {
+  margin-bottom: 6px;
 }
 
-.service-bullets li i {
-  color: var(--cyan-primary);
-  margin-right: 8px;
+.about-feat-box p {
+  font-size: 0.84rem;
+  margin: 0;
+  line-height: 1.45;
 }
 
-/* Presupuesto Form Section */
+/* ==========================================================================
+   6. PRESUPUESTO FORM & INSTAGRAM FEED (Contacto Final)
+   ========================================================================== */
 .cotizador-section {
-  padding: 70px 0;
+  padding: 95px 0;
   background: #FFFFFF;
+  border-top: 1px solid var(--border-glass);
 }
 
 .whatsapp-form-card {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: var(--radius-lg);
-  padding: 36px 32px;
+  padding: 40px 36px;
   box-shadow: var(--shadow-card);
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 18px;
 }
 
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
@@ -642,12 +739,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .form-control {
   width: 100%;
-  padding: 12px 15px;
+  padding: 13px 16px;
   background: #F8FAFC;
   border: 1px solid #CBD5E1;
   border-radius: var(--radius-sm);
@@ -664,9 +761,9 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--cyan-glow);
 }
 
-/* Instagram Section */
+/* Instagram Live Feed Section */
 .insta-section {
-  padding: 70px 0;
+  padding: 85px 0;
   background: #F8FAFC;
   border-top: 1px solid var(--border-glass);
 }
@@ -684,7 +781,7 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
   background: #0F172A;
-  padding: 45px 0 25px;
+  padding: 50px 0 28px;
   border-top: 1px solid #1E293B;
   color: #94A3B8;
 }
@@ -701,15 +798,25 @@ footer {
   color: #94A3B8;
 }
 
-/* Mobile Fixes */
+/* ==========================================================================
+   MOBILE & RESPONSIVE FIXES
+   ========================================================================== */
 @media (max-width: 992px) {
   .about-card {
     grid-template-columns: 1fr;
-    padding: 30px 24px;
+    padding: 34px 24px;
   }
 }
 
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
   .nav-btn-cta {
     padding: 8px 14px;
     font-size: 0.82rem;
@@ -728,11 +835,7 @@ footer {
   }
 
   .hero-visual {
-    padding: 110px 0 50px;
-  }
-
-  .hero-title {
-    font-size: 2.3rem;
+    padding: 120px 0 60px;
   }
 
   .hero-subtitle {
@@ -741,7 +844,15 @@ footer {
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 32px;
+  }
+
+  .services-section,
+  .gallery-section,
+  .about-section,
+  .cotizador-section,
+  .insta-section {
+    padding: 65px 0;
   }
 
   .form-row {
@@ -750,7 +861,12 @@ footer {
   }
 
   .whatsapp-form-card {
-    padding: 24px 18px;
+    padding: 26px 20px;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 11px 13px;
   }
 
   .about-features-grid {
@@ -770,6 +886,7 @@ footer {
     font-size: 0.78rem;
   }
 }
+
 @media (min-width: 441px) {
   .nav-btn-text-short {
     display: none;
