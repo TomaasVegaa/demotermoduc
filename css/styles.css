@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-glass);
-  padding: 12px 0;
+  padding: 10px 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
@@ -109,18 +109,28 @@ h1, h2, h3, h4, h5, h6 {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--text-dark);
+  gap: 10px;
   text-decoration: none;
-  white-space: nowrap;
 }
 
-.brand-logo i {
-  color: var(--cyan-primary);
-  font-size: 1.5rem;
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.03);
+}
+
+.brand-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.3px;
 }
 
 .nav-links {
@@ -499,7 +509,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 8px;
 }
 
-/* Presupuesto Form Section (Mobile First Responsive Form Layout) */
+/* Presupuesto Form Section */
 .cotizador-section {
   padding: 70px 0;
   background: #F8FAFC;
@@ -556,10 +566,21 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--cyan-glow);
 }
 
-/* Instagram Embed Container */
+/* Instagram Section */
 .insta-section {
   padding: 70px 0;
   background: #FFFFFF;
+}
+
+/* Footer Brand Logo */
+.brand-logo-img-footer {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  background: #FFF;
+  padding: 4px;
 }
 
 footer {
@@ -581,17 +602,18 @@ footer {
   color: #94A3B8;
 }
 
-/* ==========================================================================
-   MOBILE & RESPONSIVE FIXES
-   ========================================================================== */
+/* Mobile Fixes */
 @media (max-width: 768px) {
-  /* Navbar Button Fix */
   .nav-btn-cta {
     padding: 8px 14px;
     font-size: 0.82rem;
   }
   
-  .brand-logo {
+  .brand-logo-img {
+    height: 36px;
+  }
+  
+  .brand-logo-text {
     font-size: 1.15rem;
   }
 
@@ -616,7 +638,6 @@ footer {
     gap: 30px;
   }
 
-  /* Form Row Single Column Fix on Mobile */
   .form-row {
     grid-template-columns: 1fr !important;
     gap: 14px;
@@ -624,11 +645,6 @@ footer {
 
   .whatsapp-form-card {
     padding: 24px 18px;
-  }
-
-  .form-control {
-    font-size: 0.9rem;
-    padding: 11px 13px;
   }
 }
 
