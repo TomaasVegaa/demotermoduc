@@ -161,6 +161,8 @@ p {
   height: 44px;
   width: auto;
   object-fit: contain;
+  background: #FFF;
+  padding: 4px;
   border-radius: 6px;
   transition: var(--transition);
 }
