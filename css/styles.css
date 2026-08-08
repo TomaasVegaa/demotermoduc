@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Clients Logo Slider */
 .clients-slider-section {
-  padding: 45px 0;
+  padding: 40px 0;
   background: #FFFFFF;
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
@@ -282,7 +282,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--text-muted);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .slider-container {
@@ -367,6 +367,87 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-item:hover .logo-item-img {
   transform: scale(1.05);
+}
+
+/* About Us Section ("Sobre Nosotros") */
+.about-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+}
+
+.about-card {
+  background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 100%);
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg);
+  padding: 45px;
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.about-feat-box {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: var(--transition);
+}
+
+.about-feat-box:hover {
+  border-color: var(--cyan-primary);
+  transform: translateY(-3px);
+}
+
+.about-feat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: #E0F2FE;
+  color: var(--cyan-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.about-feat-icon.orange {
+  background: #FFEDD5;
+  color: var(--orange-accent);
+}
+
+.about-feat-box h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.about-feat-box p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
 }
 
 /* Photo Gallery Showcase */
@@ -455,15 +536,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFF;
 }
 
-/* Service Cards */
+/* Expanded Service Cards Grid */
 .services-section {
-  padding: 70px 0;
-  background: #FFFFFF;
+  padding: 80px 0;
+  background: #F8FAFC;
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 25px;
 }
 
@@ -471,9 +554,12 @@ h1, h2, h3, h4, h5, h6 {
   background: #FFFFFF;
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
-  padding: 26px;
+  padding: 28px;
   box-shadow: var(--shadow-card);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service-box:hover {
@@ -526,9 +612,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Presupuesto Form Section */
 .cotizador-section {
   padding: 70px 0;
-  background: #F8FAFC;
-  border-top: 1px solid var(--border-glass);
-  border-bottom: 1px solid var(--border-glass);
+  background: #FFFFFF;
 }
 
 .whatsapp-form-card {
@@ -583,7 +667,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Instagram Section */
 .insta-section {
   padding: 70px 0;
-  background: #FFFFFF;
+  background: #F8FAFC;
+  border-top: 1px solid var(--border-glass);
 }
 
 /* Footer Brand Logo */
@@ -617,6 +702,13 @@ footer {
 }
 
 /* Mobile Fixes */
+@media (max-width: 992px) {
+  .about-card {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-btn-cta {
     padding: 8px 14px;
@@ -659,6 +751,10 @@ footer {
 
   .whatsapp-form-card {
     padding: 24px 18px;
+  }
+
+  .about-features-grid {
+    grid-template-columns: 1fr;
   }
 }
 
