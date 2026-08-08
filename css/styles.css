@@ -1,7 +1,7 @@
 /* ==========================================================================
    TERMODUC - Climatización Central, Conductos & Servicios Eléctricos
    Modern Light Industrial UI/UX Design System (Vercel Ready)
-   Refactored for CRO, Visual Hierarchy & Mobile UX (Clean Centered Hero)
+   Bi-Directional Dual-Track Infinite Slider System
    ========================================================================== */
 
 :root {
@@ -215,7 +215,6 @@ p {
   max-width: 100%;
 }
 
-/* High Contrast Primary Hero CTA */
 .btn-whatsapp-hero {
   background: linear-gradient(135deg, #25D366, #1EBE57);
   color: #FFFFFF !important;
@@ -257,7 +256,6 @@ p {
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
-/* Secondary Button (Neutral & Subdued) */
 .btn-outline {
   background: #FFFFFF;
   border: 1px solid #CBD5E1;
@@ -286,7 +284,6 @@ p {
   box-shadow: 0 8px 25px rgba(225, 48, 108, 0.45);
 }
 
-/* Robust Form Submit Button */
 .btn-form-submit {
   width: 100%;
   padding: 16px 24px;
@@ -364,10 +361,10 @@ p {
 }
 
 /* ==========================================================================
-   2. CLIENTS SLIDER SECTION (Prueba Social)
+   2. BI-DIRECTIONAL DUAL-TRACK CLIENTS SLIDER SECTION
    ========================================================================== */
 .clients-slider-section {
-  padding: 55px 0;
+  padding: 55px 0 65px;
   background: #FFFFFF;
   border-top: 1px solid var(--border-glass);
   border-bottom: 1px solid var(--border-glass);
@@ -381,7 +378,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   color: var(--cyan-primary);
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .slider-container {
@@ -412,17 +409,32 @@ p {
   background: linear-gradient(to left, #FFFFFF, transparent);
 }
 
-.slider-track {
+/* Track 1: Move Left */
+.slider-track-left {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   width: max-content;
-  animation: scroll 45s linear infinite;
+  animation: scrollLeft 50s linear infinite;
 }
 
-@keyframes scroll {
+/* Track 2: Move Right */
+.slider-track-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+  animation: scrollRight 50s linear infinite;
+}
+
+@keyframes scrollLeft {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 .logo-item {
@@ -430,14 +442,14 @@ p {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 60px;
-  padding: 10px 24px;
+  height: 58px;
+  padding: 8px 22px;
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #475569;
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
@@ -445,15 +457,15 @@ p {
 }
 
 .logo-item-img {
-  height: 44px;
+  height: 42px;
   width: auto;
-  max-width: 180px;
+  max-width: 170px;
   object-fit: contain;
   transition: var(--transition);
 }
 
 .logo-item i {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--cyan-primary);
 }
 
