@@ -604,7 +604,23 @@ p {
 @media (max-width: 768px) {
   .gallery-masonry {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
+  }
+  .photo-card {
+    height: 220px;
+  }
+  .photo-overlay {
+    padding: 10px 12px;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.6) 70%, transparent 100%);
+  }
+  .photo-tag {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    margin-bottom: 4px;
+  }
+  .photo-title {
+    font-size: 0.82rem;
+    line-height: 1.2;
   }
 }
 
