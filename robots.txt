@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# Allow AI Search Crawlers for Gemini, ChatGPT & Perplexity
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://termoduc.com/sitemap.xml
